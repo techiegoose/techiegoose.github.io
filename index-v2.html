@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Techie Goose</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://drive.google.com/uc?export=view&id=1GcDe3fEVyxMMKEszhOo9CBaF6hZipsYH">
+    <style>
+        * {
+            margin: 0;
+            font-size: 20px;
+            box-sizing: border-box;
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        html {
+            scroll-snap-type: y mandatory;
+        }
+
+        header,
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background: #7D6E83; */
+            color: #fff;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            height: 10vh;
+            z-index: 100;
+        }
+
+        section {
+            height: max-content;
+            min-height: 100vh;
+            padding-top: 70px;
+            padding-bottom: 30px;
+            text-align: center;
+        }
+
+        section:nth-of-type(1),
+        section:nth-of-type(1) h2 {
+            background: #F8EDE3;
+        }
+
+        section:nth-of-type(2),
+        section:nth-of-type(2) h2 {
+            background: #DFD3C3;
+        }
+
+        section:nth-of-type(3),
+        section:nth-of-type(3) h2 {
+            background: #D0B8A8;
+        }
+
+        h2 {
+            position: sticky;
+            top: 70px;
+            padding: 20px;
+            color: #7D6E83;
+        }
+
+        footer {
+            height: 100px;
+        }
+
+        .scroll-item {
+            scroll-snap-align: start;
+            scroll-snap-stop: always;
+        }
+
+
+
+        /* CodePen Navbar Idea
+        * URL: https://codepen.io/petrabayu/pen/vYPZrVv
+        */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .container {
+            /* background: #ffbdc9;     */
+            margin-top: 3vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav {
+            background: #fff;
+            border-radius: 50px;
+            /* padding: 10px; */
+            box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.4);
+        }
+
+        nav ul li {
+            list-style: none;
+            display: inline-block;
+            padding: 15px 35px;
+            margin: 10px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #777;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+            transition: color 0.5s;
+        }
+
+        nav ul li::after {
+            content: "";
+            background: #f44566;
+            width: 100%;
+            height: 100%;
+            border-radius: 30px;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            opacity: 0;
+            transition: top 0.5s, opacity 0.5s;
+        }
+
+        nav ul li:hover {
+            color: #fff;
+        }
+
+        nav ul li:hover::after {
+            top: 50%;
+            opacity: 1;
+        }
+
+        /*
+        * Jason custom CSS
+        */
+
+        .techie {
+            background: url("https://iili.io/JcVlj3b.png") !important;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            background-position: center center !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Services</li>
+                    <li>Products</li>
+                    <li>Clients</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </div>
+    </header> -->
+    <div class="scoll-container">
+        <section class="scroll-item techie">
+        </section>
+        <!-- <section class="scroll-item">
+            <h2>Section 2</h2>
+        </section>
+        <section class="scroll-item">
+            <h2>Section 3</h2>
+        </section>
+        <footer class="scroll-item">Footer</footer> -->
+    </div>
+</body>
+
+</html>
